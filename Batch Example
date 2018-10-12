@@ -1,0 +1,11 @@
+int lowerLimit = 1;
+        int upperLimit = 100;
+        String range = "";
+
+        while (true) {
+            lowerLimit += 500;
+            upperLimit += 500;
+            range = "\"" + lowerLimit + "-" + upperLimit + "\"" ;
+            json = json.replaceFirst("(\"page\":).*\"(.*)\"", "$1".concat(range));
+            System.out.println(json);
+        }
